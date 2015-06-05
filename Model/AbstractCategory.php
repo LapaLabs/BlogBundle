@@ -5,9 +5,9 @@ namespace LapaLabs\BlogBundle\Model;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Class AbstractPost
+ * Class AbstractCategory
  */
-abstract class AbstractPost
+abstract class AbstractCategory
 {
     /**
      * @var int
@@ -46,7 +46,7 @@ abstract class AbstractPost
     /**
      * Get id
      *
-     * @return integer
+     * @return integer 
      */
     public function getId()
     {
@@ -69,7 +69,7 @@ abstract class AbstractPost
     /**
      * Get heading
      *
-     * @return string
+     * @return string 
      */
     public function getHeading()
     {
@@ -92,7 +92,7 @@ abstract class AbstractPost
     /**
      * Get excerpt
      *
-     * @return string
+     * @return string 
      */
     public function getExcerpt()
     {
@@ -115,7 +115,7 @@ abstract class AbstractPost
     /**
      * Get content
      *
-     * @return string
+     * @return string 
      */
     public function getContent()
     {
@@ -138,7 +138,7 @@ abstract class AbstractPost
     /**
      * Get published
      *
-     * @return boolean
+     * @return boolean 
      */
     public function getPublished()
     {
