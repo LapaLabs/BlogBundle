@@ -1,87 +1,80 @@
 <?php
 
-namespace LapaLabs\BlogBundle\Entity;
+namespace LapaLabs\BlogBundle\Model;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * Post
- *
- * @ORM\Table()
- * @ORM\Entity
+ * Class Post
  */
-class Post
+abstract class AbstractPost
 {
     /**
-     * @var integer
-     *
-     * @ORM\Column(name="id", type="integer")
-     * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
+     * @var int
      */
-    private $id;
+    protected $id;
 
     /**
      * @var string
      *
      * @ORM\Column(name="heading", type="string", length=255)
      */
-    private $heading;
+    protected $heading;
 
     /**
      * @var string
      *
      * @ORM\Column(name="excerpt", type="text")
      */
-    private $excerpt;
+    protected $excerpt;
 
     /**
      * @var string
      *
      * @ORM\Column(name="content", type="text")
      */
-    private $content;
+    protected $content;
 
     /**
      * @var string
      *
      * @ORM\Column(name="title", type="string", length=255)
      */
-    private $title;
+    protected $title;
 
     /**
      * @var string
      *
      * @ORM\Column(name="description", type="string", length=255)
      */
-    private $description;
+    protected $description;
 
     /**
      * @var string
      *
      * @ORM\Column(name="keywords", type="string", length=255)
      */
-    private $keywords;
+    protected $keywords;
 
     /**
      * @var string
      *
      * @ORM\Column(name="slug", type="string", length=255)
      */
-    private $slug;
+    protected $slug;
 
     /**
      * @var boolean
      *
      * @ORM\Column(name="published", type="boolean")
      */
-    private $published;
+    protected $published;
 
 
     /**
      * Get id
      *
-     * @return integer 
+     * @return integer
      */
     public function getId()
     {
@@ -104,7 +97,7 @@ class Post
     /**
      * Get heading
      *
-     * @return string 
+     * @return string
      */
     public function getHeading()
     {
@@ -127,7 +120,7 @@ class Post
     /**
      * Get excerpt
      *
-     * @return string 
+     * @return string
      */
     public function getExcerpt()
     {
@@ -150,7 +143,7 @@ class Post
     /**
      * Get content
      *
-     * @return string 
+     * @return string
      */
     public function getContent()
     {
@@ -173,7 +166,7 @@ class Post
     /**
      * Get title
      *
-     * @return string 
+     * @return string
      */
     public function getTitle()
     {
@@ -196,7 +189,7 @@ class Post
     /**
      * Get description
      *
-     * @return string 
+     * @return string
      */
     public function getDescription()
     {
@@ -219,7 +212,7 @@ class Post
     /**
      * Get keywords
      *
-     * @return string 
+     * @return string
      */
     public function getKeywords()
     {
@@ -242,7 +235,7 @@ class Post
     /**
      * Get slug
      *
-     * @return string 
+     * @return string
      */
     public function getSlug()
     {
@@ -265,7 +258,7 @@ class Post
     /**
      * Get published
      *
-     * @return boolean 
+     * @return boolean
      */
     public function getPublished()
     {
