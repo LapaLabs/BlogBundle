@@ -1,0 +1,19 @@
+{
+    "name": "lapalabs/blog-bundle",
+    "description": "The Symfony Blog Bundle",
+    "keywords": ["lapalabs", "blog", "post", "category", "bundle"],
+    "homepage": "https://github.com/LapaLabs/BlogBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "LapaLabs",
+            "email": "mail@brainforce.kiev.ua"
+        }
+    ],
+    "require": {
+        "symfony/framework-bundle": "~2.0"
+    },
+    "autoload": {
+        "psr-4": {"LapaLabs\\BlogBundle\\": ""}
+    }
+}
