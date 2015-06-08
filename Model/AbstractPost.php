@@ -15,6 +15,13 @@ abstract class AbstractPost
     protected $id;
 
     /**
+     * @var boolean
+     *
+     * @ORM\Column(name="published", type="boolean")
+     */
+    protected $published;
+
+    /**
      * @var string
      *
      * @ORM\Column(name="heading", type="string", length=255)
@@ -35,13 +42,6 @@ abstract class AbstractPost
      */
     protected $content;
 
-    /**
-     * @var boolean
-     *
-     * @ORM\Column(name="published", type="boolean")
-     */
-    protected $published;
-
 
     /**
      * Get id
@@ -51,6 +51,29 @@ abstract class AbstractPost
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * Set published
+     *
+     * @param boolean $published
+     * @return $this
+     */
+    public function setPublished($published)
+    {
+        $this->published = $published;
+
+        return $this;
+    }
+
+    /**
+     * Get published
+     *
+     * @return boolean
+     */
+    public function getPublished()
+    {
+        return $this->published;
     }
 
     /**
@@ -120,28 +143,5 @@ abstract class AbstractPost
     public function getContent()
     {
         return $this->content;
-    }
-
-    /**
-     * Set published
-     *
-     * @param boolean $published
-     * @return $this
-     */
-    public function setPublished($published)
-    {
-        $this->published = $published;
-
-        return $this;
-    }
-
-    /**
-     * Get published
-     *
-     * @return boolean
-     */
-    public function getPublished()
-    {
-        return $this->published;
     }
 }
