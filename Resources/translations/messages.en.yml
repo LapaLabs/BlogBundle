@@ -1,0 +1,10 @@
+lapalabs:
+  blog:
+    published: Published?
+    heading: Heading
+    excerpt: Excerpt
+    content: Content
+    title: Title in browser
+    description: Description meta tag
+    keywords: Keywords meta tag
+    slug: Slug in address bar

@@ -1,0 +1,10 @@
+lapalabs:
+  blog:
+    published: Опубликовано?
+    heading: Заголовок
+    excerpt: Отрывок
+    content: Контент
+    title: Заголовок в браузере
+    description: Описание
+    keywords: Ключевые слова
+    slug: Алиас в адресной строке
