@@ -2,12 +2,13 @@
 
 namespace LapaLabs\BlogBundle\Model;
 
+use AppBundle\Entity\Category;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Class AbstractPost
  */
-abstract class AbstractPost
+abstract class AbstractPost implements CategoryPostInterface
 {
     /**
      * @var int
@@ -42,6 +43,16 @@ abstract class AbstractPost
      */
     protected $content;
 
+    /**
+     * @var Category
+     *
+     * @ORM\ManyToOne(targetEntity="LapaLabs\BlogBundle\Model\PostCategoryInterface", inversedBy="posts")
+     */
+    protected $category;
+
+    public function __construct()
+    {
+    }
 
     /**
      * Get id
@@ -143,5 +154,21 @@ abstract class AbstractPost
     public function getContent()
     {
         return $this->content;
+    }
+
+    /**
+     * @return PostCategoryInterface|AbstractCategory
+     */
+    public function getCategory()
+    {
+        return $this->category;
+    }
+
+    /**
+     * @param PostCategoryInterface|AbstractCategory $category
+     */
+    public function setCategory(PostCategoryInterface $category = null)
+    {
+        $this->category = $category;
     }
 }

@@ -2,12 +2,13 @@
 
 namespace LapaLabs\BlogBundle\Model;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Class AbstractCategory
  */
-abstract class AbstractCategory
+abstract class AbstractCategory implements PostCategoryInterface
 {
     /**
      * @var int
@@ -42,6 +43,17 @@ abstract class AbstractCategory
      */
     protected $content;
 
+    /**
+     * @var AbstractPost[]|ArrayCollection
+     *
+     * @ORM\OneToMany(targetEntity="LapaLabs\BlogBundle\Model\CategoryPostInterface", mappedBy="category")
+     */
+    protected $posts;
+
+    public function __construct()
+    {
+        $this->posts = new ArrayCollection();
+    }
 
     /**
      * Get id
@@ -143,5 +155,21 @@ abstract class AbstractCategory
     public function getContent()
     {
         return $this->content;
+    }
+
+    /**
+     * @return CategoryPostInterface[]|AbstractPost[]|ArrayCollection
+     */
+    public function getPosts()
+    {
+        return $this->posts;
+    }
+
+    /**
+     * @param CategoryPostInterface[]|AbstractPost[]|ArrayCollection $posts
+     */
+    public function setPosts(ArrayCollection $posts = null)
+    {
+        $this->posts = $posts;
     }
 }
