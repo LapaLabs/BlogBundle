@@ -1,5 +1,7 @@
 lapalabs:
   blog:
+    post: Статья
+    category: Категория
     published: Опубликовано?
     heading: Заголовок
     excerpt: Отрывок

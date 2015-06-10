@@ -54,6 +54,11 @@ abstract class AbstractPost implements CategoryPostInterface
     {
     }
 
+    public function __toString()
+    {
+        return (string)$this->heading;
+    }
+
     /**
      * Get id
      *

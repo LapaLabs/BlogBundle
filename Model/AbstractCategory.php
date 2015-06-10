@@ -55,6 +55,11 @@ abstract class AbstractCategory implements PostCategoryInterface
         $this->posts = new ArrayCollection();
     }
 
+    public function __toString()
+    {
+        return (string)$this->heading;
+    }
+
     /**
      * Get id
      *

@@ -1,5 +1,7 @@
 lapalabs:
   blog:
+    post: Post
+    category: Category
     published: Published?
     heading: Heading
     excerpt: Excerpt

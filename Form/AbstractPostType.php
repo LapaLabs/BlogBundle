@@ -17,6 +17,9 @@ abstract class AbstractPostType extends AbstractType
             ->add('published', null, [
                 'label' => 'lapalabs.blog.published',
             ])
+            ->add('category', null, [
+                'label' => 'lapalabs.blog.category'
+            ])
             ->add('heading', null, [
                 'label' => 'lapalabs.blog.heading',
             ])
