@@ -16,43 +16,42 @@ abstract class AbstractPostType extends AbstractType
         $builder
             ->add('published', null, [
                 'label' => 'lapalabs.blog.published',
+                'translation_domain' => 'LapaLabsBlogBundle',
             ])
             ->add('category', null, [
-                'label' => 'lapalabs.blog.category'
+                'label' => 'lapalabs.blog.category',
+                'translation_domain' => 'LapaLabsBlogBundle',
             ])
             ->add('heading', null, [
                 'label' => 'lapalabs.blog.heading',
+                'translation_domain' => 'LapaLabsBlogBundle',
             ])
             ->add('excerpt', null, [
                 'label' => 'lapalabs.blog.excerpt',
+                'translation_domain' => 'LapaLabsBlogBundle',
             ])
             ->add('content', null, [
                 'label' => 'lapalabs.blog.content',
+                'translation_domain' => 'LapaLabsBlogBundle',
             ])
             ->add('title', null, [
                 'label' => 'lapalabs.blog.title',
+                'translation_domain' => 'LapaLabsBlogBundle',
             ])
             ->add('description', null, [
                 'label' => 'lapalabs.blog.description',
+                'translation_domain' => 'LapaLabsBlogBundle',
             ])
             ->add('keywords', null, [
                 'label' => 'lapalabs.blog.keywords',
+                'translation_domain' => 'LapaLabsBlogBundle',
             ])
             ->add('slug', null, [
                 'label' => 'lapalabs.blog.slug',
+                'translation_domain' => 'LapaLabsBlogBundle',
             ])
         ;
     }
-    
-//    /**
-//     * @param OptionsResolverInterface $resolver
-//     */
-//    public function setDefaultOptions(OptionsResolverInterface $resolver)
-//    {
-//        $resolver->setDefaults(array(
-//            'data_class' => 'AppBundle\Entity\Post'
-//        ));
-//    }
 
     /**
      * @return string
