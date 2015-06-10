@@ -18,28 +18,28 @@ abstract class AbstractPost implements CategoryPostInterface
     /**
      * @var boolean
      *
-     * @ORM\Column(name="published", type="boolean")
+     * @ORM\Column(type="boolean")
      */
     protected $published;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="heading", type="string", length=255)
+     * @ORM\Column(type="string", length=255)
      */
     protected $heading;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="excerpt", type="text")
+     * @ORM\Column(type="text")
      */
     protected $excerpt;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="content", type="text")
+     * @ORM\Column(type="text")
      */
     protected $content;
 
