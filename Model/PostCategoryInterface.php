@@ -17,5 +17,5 @@ interface PostCategoryInterface
     /**
      * @param CategoryPostInterface[]|ArrayCollection $posts
      */
-    public function setPosts(ArrayCollection $posts = null);
+    public function setPosts(ArrayCollection $posts);
 }
