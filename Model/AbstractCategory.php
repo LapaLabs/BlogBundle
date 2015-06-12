@@ -27,7 +27,7 @@ abstract class AbstractCategory implements PostCategoryInterface
 
     public function __toString()
     {
-        return (string)$this->heading;
+        return sprintf('Category #%d', $this->id);
     }
 
     /**
