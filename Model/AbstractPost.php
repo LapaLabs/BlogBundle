@@ -2,7 +2,6 @@
 
 namespace LapaLabs\BlogBundle\Model;
 
-use AppBundle\Entity\Category;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -21,34 +20,6 @@ abstract class AbstractPost implements CategoryPostInterface
      * @ORM\Column(type="boolean")
      */
     protected $published;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(type="string", length=255)
-     */
-    protected $heading;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(type="text")
-     */
-    protected $excerpt;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(type="text")
-     */
-    protected $content;
-
-    /**
-     * @var Category
-     *
-     * @ORM\ManyToOne(targetEntity="LapaLabs\BlogBundle\Model\PostCategoryInterface", inversedBy="posts")
-     */
-    protected $category;
 
     public function __construct()
     {
@@ -90,90 +61,5 @@ abstract class AbstractPost implements CategoryPostInterface
     public function getPublished()
     {
         return $this->published;
-    }
-
-    /**
-     * Set heading
-     *
-     * @param string $heading
-     * @return $this
-     */
-    public function setHeading($heading)
-    {
-        $this->heading = $heading;
-
-        return $this;
-    }
-
-    /**
-     * Get heading
-     *
-     * @return string
-     */
-    public function getHeading()
-    {
-        return $this->heading;
-    }
-
-    /**
-     * Set excerpt
-     *
-     * @param string $excerpt
-     * @return $this
-     */
-    public function setExcerpt($excerpt)
-    {
-        $this->excerpt = $excerpt;
-
-        return $this;
-    }
-
-    /**
-     * Get excerpt
-     *
-     * @return string
-     */
-    public function getExcerpt()
-    {
-        return $this->excerpt;
-    }
-
-    /**
-     * Set content
-     *
-     * @param string $content
-     * @return $this
-     */
-    public function setContent($content)
-    {
-        $this->content = $content;
-
-        return $this;
-    }
-
-    /**
-     * Get content
-     *
-     * @return string
-     */
-    public function getContent()
-    {
-        return $this->content;
-    }
-
-    /**
-     * @return PostCategoryInterface|AbstractCategory
-     */
-    public function getCategory()
-    {
-        return $this->category;
-    }
-
-    /**
-     * @param PostCategoryInterface|AbstractCategory $category
-     */
-    public function setCategory(PostCategoryInterface $category = null)
-    {
-        $this->category = $category;
     }
 }

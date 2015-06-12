@@ -2,7 +2,6 @@
 
 namespace LapaLabs\BlogBundle\Model;
 
-use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -22,37 +21,8 @@ abstract class AbstractCategory implements PostCategoryInterface
      */
     protected $published;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(type="string", length=255)
-     */
-    protected $heading;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(type="text")
-     */
-    protected $excerpt;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(type="text")
-     */
-    protected $content;
-
-    /**
-     * @var AbstractPost[]|ArrayCollection
-     *
-     * @ORM\OneToMany(targetEntity="LapaLabs\BlogBundle\Model\CategoryPostInterface", mappedBy="category")
-     */
-    protected $posts;
-
     public function __construct()
     {
-        $this->posts = new ArrayCollection();
     }
 
     public function __toString()
@@ -91,90 +61,5 @@ abstract class AbstractCategory implements PostCategoryInterface
     public function getPublished()
     {
         return $this->published;
-    }
-
-    /**
-     * Set heading
-     *
-     * @param string $heading
-     * @return $this
-     */
-    public function setHeading($heading)
-    {
-        $this->heading = $heading;
-
-        return $this;
-    }
-
-    /**
-     * Get heading
-     *
-     * @return string 
-     */
-    public function getHeading()
-    {
-        return $this->heading;
-    }
-
-    /**
-     * Set excerpt
-     *
-     * @param string $excerpt
-     * @return $this
-     */
-    public function setExcerpt($excerpt)
-    {
-        $this->excerpt = $excerpt;
-
-        return $this;
-    }
-
-    /**
-     * Get excerpt
-     *
-     * @return string 
-     */
-    public function getExcerpt()
-    {
-        return $this->excerpt;
-    }
-
-    /**
-     * Set content
-     *
-     * @param string $content
-     * @return $this
-     */
-    public function setContent($content)
-    {
-        $this->content = $content;
-
-        return $this;
-    }
-
-    /**
-     * Get content
-     *
-     * @return string 
-     */
-    public function getContent()
-    {
-        return $this->content;
-    }
-
-    /**
-     * @return CategoryPostInterface[]|AbstractPost[]|ArrayCollection
-     */
-    public function getPosts()
-    {
-        return $this->posts;
-    }
-
-    /**
-     * @param CategoryPostInterface[]|AbstractPost[]|ArrayCollection $posts
-     */
-    public function setPosts(ArrayCollection $posts = null)
-    {
-        $this->posts = $posts;
     }
 }
