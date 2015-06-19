@@ -54,6 +54,30 @@ abstract class AbstractPost implements CategoryPostInterface
     }
 
     /**
+     * Set published to true
+     *
+     * @return $this
+     */
+    public function publish()
+    {
+        $this->published = true;
+
+        return $this;
+    }
+
+    /**
+     * Set published to false
+     *
+     * @return $this
+     */
+    public function unpublish()
+    {
+        $this->published = false;
+
+        return $this;
+    }
+
+    /**
      * Get published
      *
      * @return boolean
