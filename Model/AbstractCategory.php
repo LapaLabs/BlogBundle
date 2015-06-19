@@ -58,7 +58,7 @@ abstract class AbstractCategory implements PostCategoryInterface
      *
      * @return boolean
      */
-    public function getPublished()
+    public function isPublished()
     {
         return $this->published;
     }

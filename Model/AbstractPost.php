@@ -82,7 +82,7 @@ abstract class AbstractPost implements CategoryPostInterface
      *
      * @return boolean
      */
-    public function getPublished()
+    public function isPublished()
     {
         return $this->published;
     }
