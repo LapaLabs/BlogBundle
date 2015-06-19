@@ -4,6 +4,9 @@ namespace LapaLabs\BlogBundle\Model;
 
 /**
  * Class PostsToCategory
+ *
+ * @author Victor Bocharsky <bocharsky.bw@gmail.com>
+ * @license http://opensource.org/licenses/mit-license.php The MIT License
  */
 trait PostsToCategory
 {

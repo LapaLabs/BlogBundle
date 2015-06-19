@@ -6,6 +6,9 @@ use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Class CategoryToPosts
+ *
+ * @author Victor Bocharsky <bocharsky.bw@gmail.com>
+ * @license http://opensource.org/licenses/mit-license.php The MIT License
  */
 trait CategoryToPosts
 {

@@ -6,6 +6,9 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Class AbstractCategory
+ *
+ * @author Victor Bocharsky <bocharsky.bw@gmail.com>
+ * @license http://opensource.org/licenses/mit-license.php The MIT License
  */
 abstract class AbstractCategory implements PostCategoryInterface
 {
@@ -15,7 +18,7 @@ abstract class AbstractCategory implements PostCategoryInterface
     protected $id;
 
     /**
-     * @var boolean
+     * @var bool
      *
      * @ORM\Column(type="boolean")
      */
@@ -41,9 +44,43 @@ abstract class AbstractCategory implements PostCategoryInterface
     }
 
     /**
+     * Is published
+     *
+     * @return bool
+     */
+    public function isPublished()
+    {
+        return $this->published;
+    }
+
+    /**
+     * Set published to true
+     *
+     * @return $this
+     */
+    public function publish()
+    {
+        $this->published = true;
+
+        return $this;
+    }
+
+    /**
+     * Set published to false
+     *
+     * @return $this
+     */
+    public function unpublish()
+    {
+        $this->published = false;
+
+        return $this;
+    }
+
+    /**
      * Set published
      *
-     * @param boolean $published
+     * @param bool $published
      * @return $this
      */
     public function setPublished($published)
@@ -51,15 +88,5 @@ abstract class AbstractCategory implements PostCategoryInterface
         $this->published = $published;
 
         return $this;
-    }
-
-    /**
-     * Get published
-     *
-     * @return boolean
-     */
-    public function isPublished()
-    {
-        return $this->published;
     }
 }

@@ -5,6 +5,12 @@ namespace LapaLabs\BlogBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 
+/**
+ * Class AbstractPostType
+ *
+ * @author Victor Bocharsky <bocharsky.bw@gmail.com>
+ * @license http://opensource.org/licenses/mit-license.php The MIT License
+ */
 abstract class AbstractPostType extends AbstractType
 {
     /**

@@ -6,6 +6,9 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Class AbstractPost
+ *
+ * @author Victor Bocharsky <bocharsky.bw@gmail.com>
+ * @license http://opensource.org/licenses/mit-license.php The MIT License
  */
 abstract class AbstractPost implements CategoryPostInterface
 {
@@ -15,7 +18,7 @@ abstract class AbstractPost implements CategoryPostInterface
     protected $id;
 
     /**
-     * @var boolean
+     * @var bool
      *
      * @ORM\Column(type="boolean")
      */
@@ -41,16 +44,13 @@ abstract class AbstractPost implements CategoryPostInterface
     }
 
     /**
-     * Set published
+     * Is published
      *
-     * @param boolean $published
-     * @return $this
+     * @return bool
      */
-    public function setPublished($published)
+    public function isPublished()
     {
-        $this->published = $published;
-
-        return $this;
+        return $this->published;
     }
 
     /**
@@ -78,12 +78,15 @@ abstract class AbstractPost implements CategoryPostInterface
     }
 
     /**
-     * Get published
+     * Set published
      *
-     * @return boolean
+     * @param bool $published
+     * @return $this
      */
-    public function isPublished()
+    public function setPublished($published)
     {
-        return $this->published;
+        $this->published = $published;
+
+        return $this;
     }
 }
